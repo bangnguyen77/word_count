@@ -3,11 +3,11 @@ require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe('the title case path', {:type => :feature}) do
-  it('processes the user entry and returns it title cased') do
+describe('the word count path', {:type => :feature}) do
+  it('processes the user entry and counts the same word') do
     visit('/')
-    fill_in('title', :with => 'green eggs and ham')
-    click_button('Send')
-    expect(page).to have_content('Green Eggs and Ham')
+    fill_in('word_count', :with => 'If Peter Piper picked a peck of pickled peppers, where is the peck of pickled peppers picked', 'peck')
+    click_button('Count')
+    expect(page).to have_content('2')
   end
 end

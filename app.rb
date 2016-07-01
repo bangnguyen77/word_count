@@ -1,13 +1,14 @@
 require('sinatra')
 require('sinatra/reloader')
-require('./lib/title_case')
+require('./lib/word_count')
 also_reload('lib/**/*.rb')
 
 get('/') do
   erb(:index)
 end
 
-get('/title') do
-  @title = params.fetch('title').title_case()
-  erb(:title)
+get('/word_count') do
+  @string_input = params.fetch('string_input')
+  @word_input = params.fetch('word_input').word_count()
+  erb(:word_count)
 end
