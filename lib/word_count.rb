@@ -1,12 +1,14 @@
 class String
   define_method(:word_count) do
-    string_input = self
-    string_array = self.donwcase!().split(" ")
-    word_input = self.downcase!()
-    word_count = 0
+    string_input = ""
+    new_string = string_input.downcase()
+    string_array = new_string.split()
+    word_input = ""
+    word_lowercase = word_input.downcase()
+    word_count = ""
     string_array.each() do |word|
-      if word_input.include?(word)
-        word_count += word_count
+      if word_lowercase.include?(word)
+        return word_count
       end
     end
   end
