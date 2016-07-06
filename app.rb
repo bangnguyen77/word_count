@@ -1,13 +1,13 @@
-require('sinatra')
+require("sinatra")
 require('sinatra/reloader')
-require('./lib/word_count')
 also_reload('lib/**/*.rb')
+require('./lib/word_count')
 
-get('/') do
+
+get('/')do
   erb(:index)
 end
-
-get('/word_count') do
-  @word = params.fetch('word').word_count(params.fetch('sentence'))
+get ('/word_count') do
+  @word_count = params.fetch('word').word_count(params.fetch('sentence'))
   erb(:word_count)
 end
