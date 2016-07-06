@@ -1,18 +1,13 @@
 class String
-  define_method(:word_count) do
-    string_input = self
-    string_array = string_input.downcase().split()
-    word_input = self
-    word_lowercase = word_input.downcase()
-    word_count = 0
-    string_array.each do |word|
-      if word_lowercase.include?(word)
-        string_array.count(word_lowercase)
-        return word_count
-      else
-        return 0
+  define_method(:word_count) do |sentence|
+    sentence = self.to_s
+    answer = []
+    sentence.downcase do |word|
+      if sentence.include(word)
+        return answer.to_s
+      elsif sentence.!include(word)
+        return "The sentence doesn't have your word"
       end
     end
-    return word_count
   end
 end
