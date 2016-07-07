@@ -28,8 +28,7 @@ Count the word | "If Peter Piper picked a peck of pickled peppers, where is the 
 ** Ruby
 
 ## Link to the webpage:
-http://bangnguyen77.github.io/word_count
-https://dashboard.heroku.com/apps/bearded-loon-89588
+https://mighty-stream-92381.herokuapp.com/
 
 ## Legal:
 Copyright (c) 2016 Bang Nguyen
