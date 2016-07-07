@@ -10,6 +10,6 @@ describe('the word count path', {:type => :feature}) do
     where is the peck of pickled peppers picked')
     fill_in('word', :with => 'peck')
     click_button('Count')
-    expect(page).to have_content('2')
+    expect(page).to have_content(2)
   end
 end

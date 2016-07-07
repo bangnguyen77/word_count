@@ -1,13 +1,16 @@
 class String
   define_method(:word_count) do |sentence|
-    sentence = self.to_s
-    answer = []
-    sentence.downcase do |word|
-      if sentence.include(word)
-        return answer.to_s
-      elsif sentence.!include(word)
-        return "The sentence doesn't have your word"
+    counter = 0
+    sentence.downcase!().split().each() do |word|
+      if word == self
+        counter += 1
       end
+    end
+    counter
+    if counter == 0
+      return "The sentence doesn't have your word"
+    else
+      return counter
     end
   end
 end
